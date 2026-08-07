@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="it">
 
@@ -18,39 +17,44 @@
 <body>
 
 
-<img src="logo.png" alt="Hotel Nautilus Poetto" class="logo">
+<div class="header">
+
+    <img 
+        src="logo.png" 
+        alt="Hotel Nautilus Poetto" 
+        class="logo">
 
 
-<h1>
-    <span id="hotel-name">
-        Hotel Nautilus Poetto
-    </span>
-</h1>
+    <h1>
+        <span id="hotel-name">
+            Hotel Nautilus Poetto
+        </span>
+    </h1>
 
 
-<h2 id="page-title">
-    Pool Bar
-</h2>
+    <h2 id="page-title">
+        Pool Bar
+    </h2>
 
 
 
-<div class="languages">
+    <div class="languages">
 
-    <button onclick="changeLanguage('it')">
-        🇮🇹 Italiano
-    </button>
+        <button onclick="changeLanguage('it')">
+            🇮🇹 Italiano
+        </button>
 
 
-    <button onclick="changeLanguage('en')">
-        🇬🇧 English
-    </button>
+        <button onclick="changeLanguage('en')">
+            🇬🇧 English
+        </button>
+
+    </div>
+
 
 </div>
 
 
-
-
-<!-- MENU CARICATO AUTOMATICAMENTE DA menu.json -->
 
 
 <div id="menu-container">
@@ -60,7 +64,8 @@
 
 
 
-<div class="customer-data">
+
+<div class="customer">
 
 
     <label id="name-label">
@@ -72,6 +77,10 @@
         type="text"
         id="customer-name"
         placeholder="Inserisci il tuo nome">
+
+
+
+    <br><br>
 
 
 
@@ -92,49 +101,57 @@
 
 
 
-<div class="total">
+<div class="order-box">
 
 
-    <span id="total-label">
-        Totale
-    </span>
+    <div class="total">
 
 
-    <strong>
-        € <span id="total">0.00</span>
-    </strong>
+        <span id="total-label">
+            Totale
+        </span>
+
+
+        <strong>
+            € <span id="total">0.00</span>
+        </strong>
+
+
+    </div>
+
+
+
+
+
+    <button
+        class="whatsapp-button"
+        onclick="sendOrder()">
+
+
+
+        🟢
+
+        <span id="order-button">
+            Ordina su WhatsApp
+        </span>
+
+
+    </button>
+
+
+
+
+
+    <p id="service-note">
+
+        Servizio piscina disponibile dalle 10:00 alle 19:00.<br>
+        Supplemento servizio piscina +10%.
+
+    </p>
+
 
 
 </div>
-
-
-
-
-
-<button 
-    class="whatsapp-button"
-    onclick="sendOrder()">
-
-
-    🟢
-
-    <span id="order-button">
-        Ordina su WhatsApp
-    </span>
-
-
-</button>
-
-
-
-
-
-<p id="service-note">
-
-    Servizio piscina disponibile dalle 10:00 alle 19:00.<br>
-    Supplemento servizio piscina +10%.
-
-</p>
 
 
 

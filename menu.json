@@ -88,112 +88,114 @@
       ]
     },
     {
-  "name_it": "Drinks",
-  "name_en": "Drinks",
-  "items": [
-    {
-      "id": 10,
-      "name_it": "Birra Ichnusa",
-      "name_en": "Ichnusa Beer",
-      "description_it": "",
-      "description_en": "",
-      "price": 4
-    },
-    {
-      "id": 11,
-      "name_it": "Calice di vino bianco",
-      "name_en": "Glass of white wine",
-      "description_it": "",
-      "description_en": "",
-      "price": 5
-    },
-    {
-      "id": 12,
-      "name_it": "Calice di vino rosso",
-      "name_en": "Glass of red wine",
-      "description_it": "",
-      "description_en": "",
-      "price": 5
-    },
-    {
-      "id": 13,
-      "name_it": "Calice di Prosecco",
-      "name_en": "Glass of Prosecco",
-      "description_it": "",
-      "description_en": "",
-      "price": 5
-    },
-    {
-      "id": 14,
-      "name_it": "Aperol Spritz",
-      "name_en": "Aperol Spritz",
-      "description_it": "",
-      "description_en": "",
-      "price": 8
-    },
-    {
-      "id": 15,
-      "name_it": "Campari Spritz",
-      "name_en": "Campari Spritz",
-      "description_it": "",
-      "description_en": "",
-      "price": 8
-    },
-    {
-      "id": 16,
-      "name_it": "Gin Tonic",
-      "name_en": "Gin Tonic",
-      "description_it": "",
-      "description_en": "",
-      "price": 8
-    },
-    {
-      "id": 17,
-      "name_it": "Coca Cola",
-      "name_en": "Coca Cola",
-      "description_it": "",
-      "description_en": "",
-      "price": 4
-    },
-    {
-      "id": 18,
-      "name_it": "Coca Cola Zero",
-      "name_en": "Coca Cola Zero",
-      "description_it": "",
-      "description_en": "",
-      "price": 4
-    },
-    {
-      "id": 19,
-      "name_it": "Fanta",
-      "name_en": "Fanta",
-      "description_it": "",
-      "description_en": "",
-      "price": 4
-    },
-    {
-      "id": 20,
-      "name_it": "Sprite",
-      "name_en": "Sprite",
-      "description_it": "",
-      "description_en": "",
-      "price": 4
-    },
-    {
-      "id": 21,
-      "name_it": "Tè alla pesca",
-      "name_en": "Peach iced tea",
-      "description_it": "",
-      "description_en": "",
-      "price": 4
-    },
-    {
-      "id": 22,
-      "name_it": "Tè al limone",
-      "name_en": "Lemon iced tea",
-      "description_it": "",
-      "description_en": "",
-      "price": 4
+      "name_it": "Drinks",
+      "name_en": "Drinks",
+      "items": [
+        {
+          "id": 10,
+          "name_it": "Birra Ichnusa",
+          "name_en": "Ichnusa Beer",
+          "description_it": "",
+          "description_en": "",
+          "price": 4
+        },
+        {
+          "id": 11,
+          "name_it": "Calice di vino bianco",
+          "name_en": "Glass of white wine",
+          "description_it": "",
+          "description_en": "",
+          "price": 5
+        },
+        {
+          "id": 12,
+          "name_it": "Calice di vino rosso",
+          "name_en": "Glass of red wine",
+          "description_it": "",
+          "description_en": "",
+          "price": 5
+        },
+        {
+          "id": 13,
+          "name_it": "Calice di Prosecco",
+          "name_en": "Glass of Prosecco",
+          "description_it": "",
+          "description_en": "",
+          "price": 5
+        },
+        {
+          "id": 14,
+          "name_it": "Aperol Spritz",
+          "name_en": "Aperol Spritz",
+          "description_it": "",
+          "description_en": "",
+          "price": 8
+        },
+        {
+          "id": 15,
+          "name_it": "Campari Spritz",
+          "name_en": "Campari Spritz",
+          "description_it": "",
+          "description_en": "",
+          "price": 8
+        },
+        {
+          "id": 16,
+          "name_it": "Gin Tonic",
+          "name_en": "Gin Tonic",
+          "description_it": "",
+          "description_en": "",
+          "price": 8
+        },
+        {
+          "id": 17,
+          "name_it": "Coca Cola",
+          "name_en": "Coca Cola",
+          "description_it": "",
+          "description_en": "",
+          "price": 4
+        },
+        {
+          "id": 18,
+          "name_it": "Coca Cola Zero",
+          "name_en": "Coca Cola Zero",
+          "description_it": "",
+          "description_en": "",
+          "price": 4
+        },
+        {
+          "id": 19,
+          "name_it": "Fanta",
+          "name_en": "Fanta",
+          "description_it": "",
+          "description_en": "",
+          "price": 4
+        },
+        {
+          "id": 20,
+          "name_it": "Sprite",
+          "name_en": "Sprite",
+          "description_it": "",
+          "description_en": "",
+          "price": 4
+        },
+        {
+          "id": 21,
+          "name_it": "Tè alla pesca",
+          "name_en": "Peach iced tea",
+          "description_it": "",
+          "description_en": "",
+          "price": 4
+        },
+        {
+          "id": 22,
+          "name_it": "Tè al limone",
+          "name_en": "Lemon iced tea",
+          "description_it": "",
+          "description_en": "",
+          "price": 4
+        }
+      ]
     }
   ]
 }

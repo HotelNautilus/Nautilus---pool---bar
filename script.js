@@ -1,4 +1,3 @@
-```javascript
 /* ==========================
 HOTEL NAUTILUS POOL BAR
 Main Script
@@ -14,10 +13,20 @@ const whatsappNumber = "393423318044";
 
 
 
-/* CARICAMENTO MENU */
+/* ==========================
+   CARICAMENTO MENU
+========================== */
 
 fetch("menu.json")
-.then(response => response.json())
+.then(response => {
+
+    if (!response.ok) {
+        throw new Error("Errore caricamento menu.json");
+    }
+
+    return response.json();
+
+})
 .then(data => {
 
     menuData = data.categories;
@@ -26,11 +35,18 @@ fetch("menu.json")
 
     updateTexts();
 
+})
+.catch(error => {
+
+    console.error(error);
+
 });
 
 
 
-/* CAMBIO LINGUA */
+/* ==========================
+   CAMBIO LINGUA
+========================== */
 
 function changeLanguage(language) {
 
@@ -44,27 +60,36 @@ function changeLanguage(language) {
 
 
 
-/* TESTI STATICI */
+/* ==========================
+   TESTI STATICI
+========================== */
 
 function updateTexts() {
+
+
+    const nameLabel = document.getElementById("name-label");
+    const nameInput = document.getElementById("customer-name");
+
+    const roomLabel = document.getElementById("room-label");
+    const roomInput = document.getElementById("room-number");
 
 
     if (currentLanguage === "it") {
 
 
-        document.getElementById("name-label").innerHTML =
+        nameLabel.innerHTML =
             "Nome (facoltativo)";
 
 
-        document.getElementById("customer-name").placeholder =
+        nameInput.placeholder =
             "Inserisci il tuo nome";
 
 
-        document.getElementById("room-label").innerHTML =
+        roomLabel.innerHTML =
             "Numero camera";
 
 
-        document.getElementById("room-number").placeholder =
+        roomInput.placeholder =
             "Inserisci il numero della camera";
 
 
@@ -80,22 +105,23 @@ function updateTexts() {
             "Servizio piscina disponibile dalle 10:00 alle 19:00.<br>Supplemento servizio piscina +10%.";
 
 
+
     } else {
 
 
-        document.getElementById("name-label").innerHTML =
+        nameLabel.innerHTML =
             "Name (optional)";
 
 
-        document.getElementById("customer-name").placeholder =
+        nameInput.placeholder =
             "Enter your name";
 
 
-        document.getElementById("room-label").innerHTML =
+        roomLabel.innerHTML =
             "Room number";
 
 
-        document.getElementById("room-number").placeholder =
+        roomInput.placeholder =
             "Enter your room number";
 
 
@@ -116,13 +142,23 @@ function updateTexts() {
 
 
 
-/* CREAZIONE MENU */
+/* ==========================
+   CREAZIONE MENU
+========================== */
 
 function renderMenu() {
 
 
-    const container =
-        document.getElementById("menu-container");
+    const container = document.getElementById("menu-container");
+
+
+    if (!container) {
+
+        console.error("Elemento menu-container non trovato");
+
+        return;
+
+    }
 
 
     container.innerHTML = "";
@@ -132,12 +168,10 @@ function renderMenu() {
     menuData.forEach(category => {
 
 
-        let title =
+        const title =
             currentLanguage === "it"
-            ?
-            category.name_it
-            :
-            category.name_en;
+            ? category.name_it
+            : category.name_en;
 
 
 
@@ -154,25 +188,21 @@ function renderMenu() {
         category.items.forEach(item => {
 
 
-            let name =
+            const name =
                 currentLanguage === "it"
-                ?
-                item.name_it
-                :
-                item.name_en;
+                ? item.name_it
+                : item.name_en;
 
 
 
-            let description =
+            const description =
                 currentLanguage === "it"
-                ?
-                item.description_it
-                :
-                item.description_en;
+                ? item.description_it
+                : item.description_en;
 
 
 
-            let quantity =
+            const quantity =
                 cart[item.id] || 0;
 
 
@@ -192,7 +222,6 @@ function renderMenu() {
                 </div>
 
 
-
                 <div class="product-bottom">
 
 
@@ -204,13 +233,12 @@ function renderMenu() {
 
                     <div class="quantity">
 
-
                         <button onclick="removeItem(${item.id})">
                             -
                         </button>
 
 
-                        <span id="qty-${item.id}">
+                        <span>
                             ${quantity}
                         </span>
 
@@ -243,9 +271,12 @@ function renderMenu() {
 
 
 
-/* AGGIUNGI */
+/* ==========================
+   AGGIUNGI PRODOTTO
+========================== */
 
 function addItem(id) {
+
 
     if (!cart[id]) {
 
@@ -263,9 +294,12 @@ function addItem(id) {
 
 
 
-/* RIMUOVI */
+/* ==========================
+   RIMUOVI PRODOTTO
+========================== */
 
 function removeItem(id) {
+
 
     if (cart[id] > 0) {
 
@@ -280,7 +314,9 @@ function removeItem(id) {
 
 
 
-/* TOTALE */
+/* ==========================
+   TOTALE
+========================== */
 
 function updateTotal() {
 
@@ -294,12 +330,8 @@ function updateTotal() {
         category.items.forEach(item => {
 
 
-            let quantity =
-                cart[item.id] || 0;
-
-
             total +=
-                quantity * item.price;
+            (cart[item.id] || 0) * item.price;
 
 
         });
@@ -316,57 +348,36 @@ function updateTotal() {
 
 
 
-/* WHATSAPP */
+/* ==========================
+   WHATSAPP
+========================== */
 
 function sendOrder() {
 
 
-    let message = "";
+    let message =
+    currentLanguage === "it"
+    ?
+    "ORDINE POOL BAR - HOTEL NAUTILUS\n\nBuongiorno, vorrei ordinare dalla piscina.\n\n"
+    :
+    "POOL BAR ORDER - HOTEL NAUTILUS\n\nGood morning, I would like to order from the pool.\n\n";
 
 
 
-    if (currentLanguage === "it") {
-
-
-        message +=
-        "ORDINE POOL BAR - HOTEL NAUTILUS\n\n";
-
-
-        message +=
-        "Buongiorno, vorrei ordinare dalla piscina.\n\n";
-
-
-    } else {
-
-
-        message +=
-        "POOL BAR ORDER - HOTEL NAUTILUS\n\n";
-
-
-        message +=
-        "Good morning, I would like to order from the pool.\n\n";
-
-    }
+    const name =
+    document.getElementById("customer-name").value;
 
 
 
-    let name =
-        document.getElementById("customer-name").value;
-
-
-
-    let room =
-        document.getElementById("room-number").value;
+    const room =
+    document.getElementById("room-number").value;
 
 
 
     if (name) {
 
-
         message +=
-        (currentLanguage === "it"
-        ? "Nome: "
-        : "Name: ")
+        (currentLanguage === "it" ? "Nome: " : "Name: ")
         +
         name
         +
@@ -378,24 +389,21 @@ function sendOrder() {
 
     if (room) {
 
-
         message +=
-        (currentLanguage === "it"
-        ? "Camera: "
-        : "Room: ")
+        (currentLanguage === "it" ? "Camera: " : "Room: ")
         +
         room
         +
-        "\n\n";
+        "\n";
 
     }
 
 
 
     message +=
-    (currentLanguage === "it"
-    ? "Ordine:\n"
-    : "Order:\n");
+    "\n"
+    +
+    (currentLanguage === "it" ? "Ordine:\n" : "Order:\n");
 
 
 
@@ -409,20 +417,20 @@ function sendOrder() {
         category.items.forEach(item => {
 
 
-            let quantity =
-                cart[item.id] || 0;
+            const quantity =
+            cart[item.id] || 0;
 
 
 
             if (quantity > 0) {
 
 
-                let itemName =
-                    currentLanguage === "it"
-                    ?
-                    item.name_it
-                    :
-                    item.name_en;
+                const itemName =
+                currentLanguage === "it"
+                ?
+                item.name_it
+                :
+                item.name_en;
 
 
 
@@ -441,7 +449,6 @@ function sendOrder() {
 
                 total +=
                 quantity * item.price;
-
 
             }
 
@@ -472,7 +479,7 @@ function sendOrder() {
 
 
     message +=
-    "\nTotal: €"
+    "\nTotale: €"
     +
     total.toFixed(2);
 
@@ -483,7 +490,7 @@ function sendOrder() {
 
 
 
-    let url =
+    const url =
     "https://wa.me/"
     +
     whatsappNumber
@@ -497,4 +504,3 @@ function sendOrder() {
     window.open(url, "_blank");
 
 }
-```
