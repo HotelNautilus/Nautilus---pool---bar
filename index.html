@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Nautilus Poetto - Pool Bar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <img src="logo.png" alt="Hotel Nautilus Poetto" class="logo">
+
+    <h1>
+        <span id="hotel-name">Hotel Nautilus Poetto</span>
+    </h1>
+
+    <h2 id="page-title">
+        Pool Bar
+    </h2>
+
+
+    <div class="languages">
+        <button onclick="changeLanguage('it')">
+            🇮🇹 Italiano
+        </button>
+
+        <button onclick="changeLanguage('en')">
+            🇬🇧 English
+        </button>
+    </div>
+
+</header>
+
+
+<main id="menu-container">
+
+    <!-- Il menu verrà caricato automaticamente da menu.json -->
+
+</main>
+
+
+<section class="customer">
+
+    <label id="name-label">
+        Nome (facoltativo)
+    </label>
+
+    <input 
+        type="text" 
+        id="customer-name"
+        placeholder="Inserisci il tuo nome">
+
+</section>
+
+
+<footer class="order-box">
+
+    <div class="total">
+
+        <span id="total-label">
+            Totale
+        </span>
+
+        <strong>
+            € <span id="total">0.00</span>
+        </strong>
+
+    </div>
+
+
+    <button 
+        class="whatsapp-button"
+        onclick="sendOrder()">
+
+        🟢 
+        <span id="order-button">
+            Ordina su WhatsApp
+        </span>
+
+    </button>
+
+
+    <p id="service-note">
+
+        Servizio piscina disponibile dalle 10:00 alle 19:00.
+        Supplemento servizio piscina +10%.
+
+    </p>
+
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

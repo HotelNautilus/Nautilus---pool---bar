@@ -1,0 +1,129 @@
+{
+  "hotel": "Hotel Nautilus Poetto",
+  "title": {
+    "it": "Pool Bar",
+    "en": "Pool Bar"
+  },
+  "service": {
+    "it": "Servizio piscina disponibile dalle 10:00 alle 19:00. Supplemento servizio piscina +10%.",
+    "en": "Pool service available from 10:00 am to 7:00 pm. Pool service charge +10%."
+  },
+  "categories": [
+    {
+      "name_it": "Food",
+      "name_en": "Food",
+      "items": [
+        {
+          "id": 1,
+          "name_it": "Maxi Toast",
+          "name_en": "Maxi Toast",
+          "description_it": "Prosciutto cotto e formaggio",
+          "description_en": "Ham and cheese",
+          "price": 8
+        },
+        {
+          "id": 2,
+          "name_it": "Insalata caprese",
+          "name_en": "Caprese Salad",
+          "description_it": "Pomodoro, mozzarella, origano",
+          "description_en": "Tomato, mozzarella and oregano",
+          "price": 13
+        },
+        {
+          "id": 3,
+          "name_it": "Bresaola, rucola e grana",
+          "name_en": "Bresaola with rocket and Parmesan",
+          "description_it": "",
+          "description_en": "",
+          "price": 16
+        },
+        {
+          "id": 4,
+          "name_it": "Affettati misti",
+          "name_en": "Mixed cold cuts",
+          "description_it": "",
+          "description_en": "",
+          "price": 18
+        },
+        {
+          "id": 5,
+          "name_it": "Insalata di frutta",
+          "name_en": "Fresh fruit salad",
+          "description_it": "",
+          "description_en": "",
+          "price": 10
+        },
+        {
+          "id": 6,
+          "name_it": "Focaccia Caprese",
+          "name_en": "Caprese Focaccia",
+          "description_it": "Pomodoro, mozzarella, origano, sale",
+          "description_en": "Tomato, mozzarella, oregano and salt",
+          "price": 8
+        },
+        {
+          "id": 7,
+          "name_it": "Focaccia Crudo",
+          "name_en": "Parma Ham Focaccia",
+          "description_it": "Pomodoro, mozzarella, prosciutto crudo, maionese, sale",
+          "description_en": "Tomato, mozzarella, Parma ham, mayonnaise and salt",
+          "price": 8
+        },
+        {
+          "id": 8,
+          "name_it": "Ciabatta Crudo",
+          "name_en": "Parma Ham Ciabatta",
+          "description_it": "Prosciutto crudo e mozzarella",
+          "description_en": "Parma ham and mozzarella",
+          "price": 8
+        },
+        {
+          "id": 9,
+          "name_it": "Ciabatta Speck",
+          "name_en": "Speck Ciabatta",
+          "description_it": "Speck e fontina",
+          "description_en": "Speck and Fontina cheese",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "name_it": "Drinks",
+      "name_en": "Drinks",
+      "items": [
+        {
+          "id": 10,
+          "name_it": "Birra Ichnusa",
+          "name_en": "Ichnusa Beer",
+          "description_it": "",
+          "description_en": "",
+          "price": 4
+        },
+        {
+          "id": 11,
+          "name_it": "Calice di vino bianco",
+          "name_en": "Glass of white wine",
+          "description_it": "",
+          "description_en": "",
+          "price": 5
+        },
+        {
+          "id": 12,
+          "name_it": "Calice di vino rosso",
+          "name_en": "Glass of red wine",
+          "description_it": "",
+          "description_en": "",
+          "price": 5
+        },
+        {
+          "id": 13,
+          "name_it": "Calice di Prosecco",
+          "name_en": "Glass of Prosecco",
+          "description_it": "",
+          "description_en": "",
+          "price": 5
+        }
+      ]
+    }
+  ]
+}

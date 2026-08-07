@@ -1,0 +1,479 @@
+/* ==========================
+   HOTEL NAUTILUS POOL BAR
+   STYLE
+========================== */
+
+:root {
+    --blue: #123d72;
+    --light-blue: #eef6fb;
+    --sand: #f8f5ef;
+    --white: #ffffff;
+    --text: #333333;
+    --green: #25D366;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--sand);
+
+    color: var(--text);
+
+    padding-bottom: 170px;
+
+}
+
+
+
+/* HEADER */
+
+.header {
+
+    background: white;
+
+    text-align: center;
+
+    padding: 25px 15px 20px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+.logo {
+
+    width: 180px;
+
+    max-width: 80%;
+
+}
+
+
+.header h1 {
+
+    font-size: 20px;
+
+    margin: 15px 0 5px;
+
+    color: var(--blue);
+
+}
+
+
+.header h2 {
+
+    margin: 0 0 20px;
+
+    color: var(--blue);
+
+    font-size: 26px;
+
+}
+
+
+
+/* LINGUE */
+
+.languages {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+.languages button {
+
+    background: white;
+
+    color: var(--blue);
+
+    border:
+
+        1px solid var(--blue);
+
+    border-radius:
+
+        20px;
+
+    padding:
+
+        8px 15px;
+
+    font-size:
+
+        14px;
+
+}
+
+
+
+/* MENU */
+
+#menu-container {
+
+    padding:
+
+        20px 15px;
+
+}
+
+
+
+.category-title {
+
+    color:
+
+        var(--blue);
+
+    font-size:
+
+        22px;
+
+    margin:
+
+        20px 0 12px;
+
+}
+
+
+
+/* PRODOTTI */
+
+.product-card {
+
+    background:
+
+        white;
+
+    border-radius:
+
+        14px;
+
+    padding:
+
+        15px;
+
+    margin-bottom:
+
+        12px;
+
+
+    box-shadow:
+
+        0 3px 10px rgba(0,0,0,0.08);
+
+}
+
+
+
+.product-name {
+
+    color:
+
+        var(--blue);
+
+    font-size:
+
+        18px;
+
+    font-weight:
+
+        bold;
+
+}
+
+
+.product-description {
+
+    margin-top:
+
+        5px;
+
+    color:
+
+        #666;
+
+    font-size:
+
+        14px;
+
+}
+
+
+
+.product-bottom {
+
+    margin-top:
+
+        15px;
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+}
+
+
+
+.price {
+
+    font-size:
+
+        18px;
+
+    font-weight:
+
+        bold;
+
+}
+
+
+
+/* QUANTITA */
+
+.quantity {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        12px;
+
+}
+
+
+
+.quantity button {
+
+    width:
+
+        36px;
+
+    height:
+
+        36px;
+
+    border-radius:
+
+        50%;
+
+    border:
+
+        none;
+
+    background:
+
+        var(--blue);
+
+    color:
+
+        white;
+
+    font-size:
+
+        22px;
+
+}
+
+
+
+/* CAMPO NOME */
+
+.customer {
+
+    padding:
+
+        0 15px 20px;
+
+}
+
+
+.customer label {
+
+    display:
+
+        block;
+
+    font-weight:
+
+        bold;
+
+    margin-bottom:
+
+        8px;
+
+}
+
+
+.customer input {
+
+    width:
+
+        100%;
+
+    padding:
+
+        14px;
+
+    border-radius:
+
+        10px;
+
+    border:
+
+        1px solid #ddd;
+
+    font-size:
+
+        16px;
+
+}
+
+
+
+/* ORDINE */
+
+.order-box {
+
+    position:
+
+        fixed;
+
+    bottom:
+
+        0;
+
+    left:
+
+        0;
+
+    right:
+
+        0;
+
+
+    background:
+
+        white;
+
+    padding:
+
+        15px;
+
+    box-shadow:
+
+        0 -3px 15px rgba(0,0,0,0.15);
+
+}
+
+
+
+.total {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    font-size:
+
+        18px;
+
+    margin-bottom:
+
+        12px;
+
+}
+
+
+
+.whatsapp-button {
+
+    width:
+
+        100%;
+
+    background:
+
+        var(--green);
+
+    color:
+
+        white;
+
+    border:
+
+        none;
+
+    padding:
+
+        15px;
+
+    border-radius:
+
+        12px;
+
+    font-size:
+
+        18px;
+
+    font-weight:
+
+        bold;
+
+}
+
+
+
+#service-note {
+
+    font-size:
+
+        11px;
+
+    text-align:
+
+        center;
+
+    color:
+
+        #777;
+
+    margin:
+
+        10px 0 0;
+
+}
