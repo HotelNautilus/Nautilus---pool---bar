@@ -1,8 +1,8 @@
+```javascript
 /* ==========================
-   HOTEL NAUTILUS POOL BAR
-   Main Script
+HOTEL NAUTILUS POOL BAR
+Main Script
 ========================== */
-
 
 let currentLanguage = "it";
 
@@ -17,16 +17,16 @@ const whatsappNumber = "393423318044";
 /* CARICAMENTO MENU */
 
 fetch("menu.json")
+.then(response => response.json())
+.then(data => {
 
-    .then(response => response.json())
+    menuData = data.categories;
 
-    .then(data => {
+    renderMenu();
 
-        menuData = data.categories;
+    updateTexts();
 
-        renderMenu();
-
-    });
+});
 
 
 
@@ -60,6 +60,14 @@ function updateTexts() {
             "Inserisci il tuo nome";
 
 
+        document.getElementById("room-label").innerHTML =
+            "Numero camera";
+
+
+        document.getElementById("room-number").placeholder =
+            "Inserisci il numero della camera";
+
+
         document.getElementById("total-label").innerHTML =
             "Totale";
 
@@ -81,6 +89,14 @@ function updateTexts() {
 
         document.getElementById("customer-name").placeholder =
             "Enter your name";
+
+
+        document.getElementById("room-label").innerHTML =
+            "Room number";
+
+
+        document.getElementById("room-number").placeholder =
+            "Enter your room number";
 
 
         document.getElementById("total-label").innerHTML =
@@ -167,16 +183,12 @@ function renderMenu() {
 
 
                 <div class="product-name">
-
                     ${name}
-
                 </div>
 
 
                 <div class="product-description">
-
                     ${description}
-
                 </div>
 
 
@@ -185,9 +197,7 @@ function renderMenu() {
 
 
                     <div class="price">
-
                         €${item.price.toFixed(2)}
-
                     </div>
 
 
@@ -237,7 +247,6 @@ function renderMenu() {
 
 function addItem(id) {
 
-
     if (!cart[id]) {
 
         cart[id] = 0;
@@ -257,7 +266,6 @@ function addItem(id) {
 /* RIMUOVI */
 
 function removeItem(id) {
-
 
     if (cart[id] > 0) {
 
@@ -304,7 +312,6 @@ function updateTotal() {
     document.getElementById("total").innerHTML =
         total.toFixed(2);
 
-
 }
 
 
@@ -315,6 +322,7 @@ function sendOrder() {
 
 
     let message = "";
+
 
 
     if (currentLanguage === "it") {
@@ -347,6 +355,11 @@ function sendOrder() {
 
 
 
+    let room =
+        document.getElementById("room-number").value;
+
+
+
     if (name) {
 
 
@@ -357,8 +370,23 @@ function sendOrder() {
         +
         name
         +
-        "\n\n";
+        "\n";
 
+    }
+
+
+
+    if (room) {
+
+
+        message +=
+        (currentLanguage === "it"
+        ? "Camera: "
+        : "Room: ")
+        +
+        room
+        +
+        "\n\n";
 
     }
 
@@ -468,5 +496,5 @@ function sendOrder() {
 
     window.open(url, "_blank");
 
-
 }
+```

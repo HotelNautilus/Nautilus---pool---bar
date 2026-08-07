@@ -1,104 +1,149 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Nautilus Poetto - Pool Bar</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<header class="header">
 
-    <img src="logo.png" alt="Hotel Nautilus Poetto" class="logo">
-
-    <h1>
-        <span id="hotel-name">Hotel Nautilus Poetto</span>
-    </h1>
-
-    <h2 id="page-title">
-        Pool Bar
-    </h2>
+<img src="logo.png" alt="Hotel Nautilus Poetto" class="logo">
 
 
-    <div class="languages">
-        <button onclick="changeLanguage('it')">
-            🇮🇹 Italiano
-        </button>
-
-        <button onclick="changeLanguage('en')">
-            🇬🇧 English
-        </button>
-    </div>
-
-</header>
+<h1>
+    <span id="hotel-name">
+        Hotel Nautilus Poetto
+    </span>
+</h1>
 
 
-<main id="menu-container">
-
-    <!-- Il menu verrà caricato automaticamente da menu.json -->
-
-</main>
+<h2 id="page-title">
+    Pool Bar
+</h2>
 
 
-<section class="customer">
+
+<div class="languages">
+
+    <button onclick="changeLanguage('it')">
+        🇮🇹 Italiano
+    </button>
+
+
+    <button onclick="changeLanguage('en')">
+        🇬🇧 English
+    </button>
+
+</div>
+
+
+
+
+<!-- MENU CARICATO AUTOMATICAMENTE DA menu.json -->
+
+
+<div id="menu-container">
+
+</div>
+
+
+
+
+<div class="customer-data">
+
 
     <label id="name-label">
         Nome (facoltativo)
     </label>
 
+
     <input 
-        type="text" 
+        type="text"
         id="customer-name"
         placeholder="Inserisci il tuo nome">
 
-</section>
 
 
-<footer class="order-box">
-
-    <div class="total">
-
-        <span id="total-label">
-            Totale
-        </span>
-
-        <strong>
-            € <span id="total">0.00</span>
-        </strong>
-
-    </div>
+    <label id="room-label">
+        Numero camera
+    </label>
 
 
-    <button 
-        class="whatsapp-button"
-        onclick="sendOrder()">
-
-        🟢 
-        <span id="order-button">
-            Ordina su WhatsApp
-        </span>
-
-    </button>
+    <input 
+        type="text"
+        id="room-number"
+        placeholder="Inserisci il numero della camera">
 
 
-    <p id="service-note">
-
-        Servizio piscina disponibile dalle 10:00 alle 19:00.
-        Supplemento servizio piscina +10%.
-
-    </p>
+</div>
 
 
-</footer>
+
+
+
+<div class="total">
+
+
+    <span id="total-label">
+        Totale
+    </span>
+
+
+    <strong>
+        € <span id="total">0.00</span>
+    </strong>
+
+
+</div>
+
+
+
+
+
+<button 
+    class="whatsapp-button"
+    onclick="sendOrder()">
+
+
+    🟢
+
+    <span id="order-button">
+        Ordina su WhatsApp
+    </span>
+
+
+</button>
+
+
+
+
+
+<p id="service-note">
+
+    Servizio piscina disponibile dalle 10:00 alle 19:00.<br>
+    Supplemento servizio piscina +10%.
+
+</p>
+
+
+
 
 
 <script src="script.js"></script>
 
+
 </body>
 
 </html>
+```

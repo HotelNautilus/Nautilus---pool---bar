@@ -122,7 +122,63 @@
           "description_it": "",
           "description_en": "",
           "price": 5
-        }
+        },
+        {
+      "id": 14,
+      "name_it": "Aperol Spritz",
+      "name_en": "Aperol Spritz",
+      "description_it": "",
+      "description_en": "",
+      "price": 8
+    },
+    {
+      "id": 15,
+      "name_it": "Campari Spritz",
+      "name_en": "Campari Spritz",
+      "description_it": "",
+      "description_en": "",
+      "price": 8
+    },
+    {
+      "id": 16,
+      "name_it": "Gin Tonic",
+      "name_en": "Gin Tonic",
+      "description_it": "",
+      "description_en": "",
+      "price": 8
+    },
+    {
+      "id": 17,
+      "name_it": "Coca Cola",
+      "name_en": "Coca Cola",
+      "description_it": "",
+      "description_en": "",
+      "price": 4
+    },
+    {
+      "id": 18,
+      "name_it": "Fanta",
+      "name_en": "Fanta",
+      "description_it": "",
+      "description_en": "",
+      "price": 4
+    },
+    {
+      "id": 19,
+      "name_it": "Sprite",
+      "name_en": "Sprite",
+      "description_it": "",
+      "description_en": "",
+      "price": 4
+    },
+    {
+      "id": 20,
+      "name_it": "Thè alla pesca/al limone",
+      "name_en": "Peach/Lemon iced tea",
+      "description_it": "",
+      "description_en": "",
+      "price": 4
+    }
       ]
     }
   ]
