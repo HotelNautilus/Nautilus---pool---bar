@@ -1,13 +1,16 @@
 {
   "hotel": "Hotel Nautilus Poetto",
+
   "title": {
     "it": "Pool Bar",
     "en": "Pool Bar"
   },
+
   "service": {
     "it": "Servizio piscina disponibile dalle 10:00 alle 19:00. Supplemento servizio piscina +10%.",
     "en": "Pool service available from 10:00 am to 7:00 pm. Pool service charge +10%."
   },
+
   "categories": [
     {
       "name_it": "Food",
@@ -194,6 +197,38 @@
           "description_it": "",
           "description_en": "",
           "price": 4
+        },
+        {
+          "id": 23,
+          "name_it": "Espresso / Espresso macchiato",
+          "name_en": "Espresso / Espresso Macchiato",
+          "description_it": "",
+          "description_en": "",
+          "price": 1.5
+        },
+        {
+          "id": 24,
+          "name_it": "Espresso decaffeinato",
+          "name_en": "Decaffeinated Espresso",
+          "description_it": "",
+          "description_en": "",
+          "price": 1.5
+        },
+        {
+          "id": 25,
+          "name_it": "Cappuccino",
+          "name_en": "Cappuccino",
+          "description_it": "",
+          "description_en": "",
+          "price": 2
+        },
+        {
+          "id": 26,
+          "name_it": "Americano",
+          "name_en": "Americano",
+          "description_it": "",
+          "description_en": "",
+          "price": 2
         }
       ]
     }
